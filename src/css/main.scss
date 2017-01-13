@@ -36,7 +36,7 @@
 
 	svg {
 		margin-top: 2px;
-		max-width: 30px;
+		max-width: 26px;
 		margin: 0 6px;
 		position: absolute;
 		bottom: 5px;
@@ -52,8 +52,8 @@
 
 	.gv-copy {
 		display: inline-block;
-		@include fs-bodyCopy(2);
-		line-height: 20px;
+		@include fs-bodyCopy(1);
+		line-height: 18px;
 
 		.gv-new-line {
 			padding: 0;
@@ -61,8 +61,13 @@
 		}
 
 		@media (min-width: 600px) {
+
 			.gv-new-line {
 				display: block;
+
+				&:first-of-type {
+					display: inline;
+				}
 			}
 		}
 	}
@@ -82,8 +87,13 @@
 		svg {
 			max-width: 25px;
 			left: 5px; 
-			top: 5px;
+			bottom: 5px;
 			padding: 0;
+
+			@media (min-width: 600px) {
+				bottom: auto;
+				top: 5px;
+			}
 		}
 
 		.gv-copy {
