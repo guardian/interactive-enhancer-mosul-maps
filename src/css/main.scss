@@ -1,0 +1,105 @@
+@import "mq";
+@import "fonts";
+
+// Uncomment for embeds
+@import "embed";
+
+// Uncomment for full screen (including immersive article main media)
+//@import "fullscreen";
+
+.element-atom,
+.interactive-atom {
+    margin: 0 !important;
+}
+
+
+
+
+.gv-container {
+	width: 100%;
+	background: #f6f6f6;
+	box-sizing: border-box;
+	padding: 10px;
+	overflow: visible;
+}
+
+.gv-row {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    box-sizing: border-box;
+	max-width: 48%;
+
+	&:first-of-type {
+		padding-left: 45px;
+	}
+
+	svg {
+		margin-top: 2px;
+		max-width: 30px;
+		margin: 0 6px;
+		position: absolute;
+		bottom: 5px;
+		left: 0;
+		padding-left: 0;
+
+		@media (min-width: 600px) {
+			bottom: auto;
+			top: 0;
+		}
+
+	}
+
+	.gv-copy {
+		display: inline-block;
+		@include fs-bodyCopy(2);
+		line-height: 20px;
+
+		.gv-new-line {
+			padding: 0;
+			display: inline;
+		}
+
+		@media (min-width: 600px) {
+			.gv-new-line {
+				display: block;
+			}
+		}
+	}
+
+	.gv-btn {
+		border-radius: 20px;
+		background: #005689;
+		padding: 0 10px 0 40px;
+		box-sizing: border-box;
+		display: inline-block;
+		margin-bottom: 5px;
+		position: relative;
+		margin-left: 10px;
+		margin-top: 5px;
+		cursor: pointer;
+
+		svg {
+			max-width: 25px;
+			left: 5px; 
+			top: 5px;
+			padding: 0;
+		}
+
+		.gv-copy {
+			vertical-align: top;
+			color: #fff;
+			padding: 5px;
+			max-width: 120px;
+			
+			@include fs-bodyCopy(1);
+			line-height: 16px;
+		}
+
+	
+	}
+}
+
+
+
+
